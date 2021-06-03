@@ -1,0 +1,36 @@
+-
+  var footermenu =[
+    { link: '/', text: 'FI2638899-8'},
+    { link: '/', text: 'Roman Denisov'},
+    { link: '/', text: 'info@tpoint.fi'},
+    { link: '/', text: 'Support Windows'},
+    { link: '/', text: 'Support Mac'},
+    { link: '/', text: 'support@tpoint.fi'}
+  ]
+
+-
+  var footersocial =[
+    { link: '/', img: 'img/icon_youtube.png', alt: 'youtube'},
+    { link: '/', img: 'img/icon_in.png', alt: 'in'},
+    { link: '/', img: 'img/icon_fb.png', alt: 'fb'}
+  ]
+
+footer.footer
+  .inner
+    .footer-left
+      .footer-left-logo
+        a(href='/')
+          img(src='img/icon_logo.png', alt='logo')
+      .footer-left-text Политика конфиденциальности
+      .footer-left-text © All rights reserved by Tpoint Oy
+    .footer-center
+      each footermenuitem in footermenu
+        a.footer-center-item(href=footermenuitem.link)=footermenuitem.text
+    .footer-right
+      .footer-right-social
+        each footersocialitem in footersocial
+          .footer-right-social-item
+            a(href=footersocialitem.link)
+              img(src=footersocialitem.img, alt=footersocialitem.alt)
+      .footer-right-phone
+        a(href='tel:+358442706526') +358 44 270 65 26

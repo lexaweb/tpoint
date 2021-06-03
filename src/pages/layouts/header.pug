@@ -1,0 +1,24 @@
+-
+  var headermenu =[
+    { link: '/', text: 'Программа'},
+    { link: '/', text: 'Стоимость'},
+    { link: '/', text: 'Обучающие видео'},
+    { link: '/', text: 'О компании'},
+    { link: '/', text: 'Контакты'}
+  ]
+
+header.header
+  .inner
+    .header-logo
+      a(href='/')
+        img(src='img/icon_logo.png', alt='logo')
+    .header-menu
+      each headermenuitem in headermenu
+        a.header-menu-item(href=headermenuitem.link)=headermenuitem.text
+    .header-language
+      a.header-language-item(href='/')
+        img.header-language-item-icon_flag(src='img/icon_ru.png', alt='ru')
+        | Ru
+        img.header-language-item-icon_arrow(src='img/icon_arrow_bottom.png', alt='arrow')
+    .header-button_login
+      a(href='/') Войти
