@@ -5,7 +5,7 @@ const imageminPngquant = require('imagemin-pngquant')
 const browsersync = require('browser-sync')
 
 module.exports = function images() {
-  return gulp.src('src/images/**/*.{gif,png,jpg,webp}')
+  return gulp.src('src/images/**/*.{gif,png,jpg,webp,mp4}')
     .pipe(cached('imgCache'))
     .pipe(imagemin([
       imageminPngquant({ quality: [0.75, 0.75] }),

@@ -23,6 +23,27 @@ block variables
       { text: 'Помимо финансового учёта Tpoint разрабатывает и внедряет логистическое решение для таможенных складов и экспедиторов в Финляндии'}
     ]
 
+  -
+    var training =[
+      { src: 'img/video/training/video1.mp4'},
+      { src: 'img/video/training/video2.mp4'},
+      { src: 'img/video/training/video3.mp4'},
+      { src: 'img/video/training/video4.mp4'},
+      { src: 'img/video/training/video5.mp4'},
+      { src: 'img/video/training/video6.mp4'},
+      { src: 'img/video/training/video7.mp4'},
+      { src: 'img/video/training/video8.mp4'},
+      { src: 'img/video/training/video9.mp4'},
+      { src: 'img/video/training/video10.mp4'},
+      { src: 'img/video/training/video11.mp4'}
+    ]
+  -
+    var testimonialsvideo =[
+      { text: 'Peter Vesterbacka, основатель Angry Birds', video: 'img/video/testimonials/video1.mp4'},
+      { text: 'Jacquelyn, USA accountant', video: 'img/video/testimonials/video2.mp4'},
+      { text: 'Quickbooks vs Xero vs Tpoint (long)', video: 'img/video/testimonials/video3.mp4'}
+    ]
+
 block content
   main
     .main-page
@@ -71,7 +92,7 @@ block content
                 p Бесплатно до 200
                 | записей в месяц
               .cost-block-item-img
-                img(src='img/img3.png', alt="img3")
+                img(src='img/img3.png', alt='img3')
             .cost-block-item
               .cost-block-item-number 02
               .cost-block-item-text
@@ -81,7 +102,47 @@ block content
                 p Опционально:
                 | &nbsp;Индивидуальные настройки программы: 80 EUR + НДС / час
               .cost-block-item-img
-                img(src='img/img5.png', alt="img3")
+                img(src='img/img5.png', alt='img5')
+        .training
+          .training-title.ui-title Обучающие видео
+          .training-block
+            .swiper-wrapper
+              each trainingslide in training
+                .swiper-slide
+                  video(src=trainingslide.src, type='video/mp4' controls)
+            .swiper-button-next
+            .swiper-button-prev
+            .swiper-pagination
+        .testimonials
+          .testimonials-title.ui-title Отзывы
+          .testimonials-tab
+            .testimonials-tab-text Текстовые
+            .testimonials-tab-video Видео-отзывы
+          .testimonials-block
+            .swiper-wrapper
+              .swiper-slide.text
+                .text-name Марианна Кок
+                .text-descr Предпринематель
+                .text-explanation Простота использования, хорошие отчеты и, прежде всего, отличное обслуживание клиентов позволяют вам самостоятельно заботиться о счетах и ​​упрощают финансовый мониторинг.
+                .text-quote "
+              .swiper-slide.text
+                .text-name Паули Турунен
+                .text-descr Бизнес-тренер
+                .text-explanation Лучшее в Tpoint - это отчеты. Отсюда я могу мгновенно увидеть финансовое положение своей компании, а также получить все цифры, удобные для налогоплательщика.
+                .text-quote "
+              .swiper-slide.text
+                .text-name Паули Турунен
+                .text-descr Бизнес-тренер
+                .text-explanation Лучшее в Tpoint - это отчеты. Отсюда я могу мгновенно увидеть финансовое положение своей компании, а также получить все цифры, удобные для налогоплательщика.
+                .text-quote "
+              each testimonialsvideoslide in testimonialsvideo
+                .swiper-slide.video
+                  .video-text=testimonialsvideoslide.text
+                  video(src=testimonialsvideoslide.video, type='video/mp4' controls)
+            .swiper-button-next
+              p Далее
+            .swiper-button-prev
+              p Назад
       .about_company
         .inner
           .about_company-title.ui-title О компании
@@ -90,7 +151,6 @@ block content
               each about_companyblockitem in about_companyblock
                 li=about_companyblockitem.text
               .about_company-block-detail
-                a(href='/') Узнать подробнее
+                a(href='https://logistics.tpoint.fi/') Узнать подробнее
             .about_company-block-img
               img(src='img/img7.png', alt='img7')
-

@@ -10,60 +10,43 @@ import 'tooltipster'
 import './_backend'
 
 $(function () {
-  uiSelects()
-  inputMask()
-  checkInputFill()
-  validation()
   sliderInit()
 })
 
-function uiSelects() {
-  const selects = $('.ui-select select')
-  selects.each(function () {
-    const current = $(this)
-    const currentWrap = current.parent('.ui-select')
-    current.select2({
-      minimumResultsForSearch: Number.POSITIVE_INFINITY,
-      width: 'auto',
-      dropdownAutoWidth: true,
-      dropdownParent: currentWrap
-    })
-  })
-}
-
-function inputMask() {
-  Inputmask({
-    mask: '+7 (999) 999-99-99',
-    showMaskOnHover: false
-  }).mask('#phone')
-}
-
-function checkInputFill() {
-  $('.ui-input input').val('')
-  $('input').on('change', function () {
-    if ($(this).val() !== '') {
-      $(this).addClass('filled')
-    } else {
-      $(this).removeClass('filled')
-    }
-  })
-}
-
-function validation() {
-  $('form').parsley()
-}
-
 function sliderInit() {
-  const swiperSlider = new Swiper('.swiper-container', {
-    speed: 400,
-    spaceBetween: 100,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets'
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    }
-  })
+  if ($('.training').length > 0) {
+    const swiperSlider = new Swiper('.training-block', {
+      slidesPerView: 3,
+      spaceBetween: 0,
+      centeredSlides: true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    })
+  }
+  if ($('.testimonials').length > 0) {
+    var swiperSlider = new Swiper('.testimonials-block', {
+      slidesPerView: 3,
+      spaceBetween: 0,
+      centeredSlides: true,
+      loop: true,
+      observer: true,
+      observeParents: true,
+      observeSlideChildren: true,
+      initialSlide: 1,
+      pagination: {
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    })
+  }
 }
