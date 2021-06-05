@@ -1,13 +1,13 @@
 -
   var headermenu =[
-    { link: '/', text: 'Программа'},
-    { link: '/', text: 'Стоимость'},
-    { link: '/', text: 'Обучающие видео'},
-    { link: '/', text: 'О компании'},
-    { link: '/', text: 'Контакты'}
+    { link: '#top-banner', text: 'Программа'},
+    { link: '#cost', text: 'Стоимость'},
+    { link: '#training', text: 'Обучающие видео'},
+    { link: '#about_company', text: 'О компании'},
+    { link: '#footer', text: 'Контакты'}
   ]
 
-header.header
+header.header#header
   .inner
     .header-logo
       a(href='/')
@@ -15,10 +15,24 @@ header.header
     .header-menu
       each headermenuitem in headermenu
         a.header-menu-item(href=headermenuitem.link)=headermenuitem.text
+    .header-mb
+      img(src='img/icon_menu.png', alt='menu')
+    .header-menu_mb
+      a(href='/')
+        img(src="img/icon_enter.png", alt="enter")
+        | Войти
+      a(href='/')
+        img(src="img/icon_user.png", alt="user")
+        | Регистрация
     .header-language
-      a.header-language-item(href='/')
+      .header-language-item
         img.header-language-item-icon_flag(src='img/icon_ru.png', alt='ru')
         | Ru
         img.header-language-item-icon_arrow(src='img/icon_arrow_bottom.png', alt='arrow')
+      .header-language-links
+        a(href='/')
+          img.header-language-item-icon_flag(src='img/icon_fi.png', alt='ru')
+        a(href='/')
+          img.header-language-item-icon_flag(src='img/icon_en.png', alt='ru')
     .header-button_login
       a(href='/') Войти

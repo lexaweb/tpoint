@@ -32,6 +32,7 @@ body {
     margin: 0 auto;
     font-family: $gotham;
     color: $black;
+    overflow: hidden;
     .inner {
       max-width: 1170px;
       margin: 0 auto;
@@ -43,86 +44,10 @@ body {
       }
       @include media-tablet {
         max-width: 100%;
-        padding: 0 10px;
+        padding: 0 20px;
       }
       section {
         margin-top: 50px;
-      }
-    }
-    main {
-      .breadcrumbs {
-        margin-bottom: 20px;
-        @include media-tablet-horizontal {
-          overflow-y: auto;
-        }
-        &-block {
-          display: flex;
-          align-items: center;
-          &-item {
-            position: relative;
-            margin-right: 5px;
-            padding-right: 10px;
-            font-size: 14px;
-            white-space: nowrap;
-            &::after {
-              content: '';
-              position: absolute;
-              top: 50%;
-              right: 0;
-              transform: translateY(-50%);
-              width: 6px;
-              height: 1px;
-              background: #aaa;
-            }
-            @include media-tablet {
-              font-size: 12px;
-            }
-            &-link {
-              color: #575757;
-              &:hover {
-                color: red;
-              }
-            }
-            span {
-              color: #aaa;
-            }
-            &:last-child {
-              margin-right: 0;
-              padding-right: 0;
-              &::after {
-                display: none;
-              }
-            }
-          }
-        }
-      }
-      .page_title {
-        margin-bottom: 30px;
-        font: 36px/1.1 $gotham;
-        @include media-laptop {
-          font-size: 28px;
-        }
-        @include media-tablet {
-          font-size: 20px;
-        }
-        h1 {
-          margin-bottom: inherit;
-          font: inherit;
-        }
-      }
-      .section_title {
-        margin-bottom: 20px;
-        font: 28px/1.1 $gotham;
-        @include media-laptop {
-          font-size: 24px;
-        }
-        @include media-tablet {
-          font-size: 18px;
-        }
-        h2 {
-          margin-bottom: inherit;
-          font: inherit;
-        }
       }
     }
   }
@@ -141,7 +66,7 @@ a {
   color: $black;
   transition: ease 0.3s;
   &:hover {
-    color: teal;
+    color: $red;
   }
 }
 ul {

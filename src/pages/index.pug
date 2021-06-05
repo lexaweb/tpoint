@@ -47,7 +47,7 @@ block variables
 block content
   main
     .main-page
-      .top-banner
+      .top-banner#top-banner
         .inner
           .top-banner-block
             .top-banner-block-title Программа
@@ -82,7 +82,7 @@ block content
                   img(src=opportunitiesblockitem.img, alt=opportunitiesblockitem.alt)
                 .opportunities-block-item-text!=opportunitiesblockitem.text
                 .opportunities-block-item-number=opportunitiesblockitem.number
-        .cost
+        .cost#cost
           .cost-title.ui-title Стоимость
           .cost-descr Выберите подходящий тариф, который будет удовлетворять вашим техническим требованиям
           .cost-block
@@ -103,7 +103,7 @@ block content
                 | &nbsp;Индивидуальные настройки программы: 80 EUR + НДС / час
               .cost-block-item-img
                 img(src='img/img5.png', alt='img5')
-        .training
+        .training#training
           .training-title.ui-title Обучающие видео
           .training-block
             .swiper-wrapper
@@ -143,7 +143,7 @@ block content
               p Далее
             .swiper-button-prev
               p Назад
-      .about_company
+      .about_company#about_company
         .inner
           .about_company-title.ui-title О компании
           .about_company-block
@@ -154,3 +154,7 @@ block content
                 a(href='https://logistics.tpoint.fi/') Узнать подробнее
             .about_company-block-img
               img(src='img/img7.png', alt='img7')
+      a.up(href='#header')
+        .up-text Наверх
+        .up-button
+          img(src='img/icon_arrow_top.png', alt='arrow_top')

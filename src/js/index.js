@@ -11,6 +11,9 @@ import './_backend'
 
 $(function () {
   sliderInit()
+  anchorInit()
+  langInit()
+  headermbInit()
 })
 
 function sliderInit() {
@@ -49,4 +52,31 @@ function sliderInit() {
       }
     })
   }
+}
+function anchorInit() {
+$("a[href^='#']").click(function(){
+  var _href = $(this).attr("href");
+  $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+  return false;
+});
+$(window).scroll(function (event) {
+  var top = $(window).scrollTop();
+   if(top >= 860){
+    $(".up").fadeIn()
+   } else {
+    $(".up").fadeOut()
+   }
+});
+}
+function langInit() {
+  $('.header-language').on('click', function () {
+    $('.header-language-links').toggleClass('active')
+  })
+}
+function headermbInit() {
+  $('.header-mb').on('click', function () {
+    $('.header-logo').toggleClass('active')
+    $('.header-language').toggleClass('active')
+    $('.header-menu_mb').toggleClass('active')
+  })
 }
