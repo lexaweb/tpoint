@@ -44,6 +44,18 @@
   &-title {
     font: 700 60px/1.2 $bebas;
     color: $black;
+    @include media-laptop {
+      font-size: 55px;
+    }
+    @include media-tablet-horizontal {
+      font-size: 50px;
+    }
+    @include media-tablet-horizontal {
+      font-size: 35px;
+    }
+    @include media-mobile {
+      font-size: 26px;
+    }
   }
   &-checkbox {
     label {

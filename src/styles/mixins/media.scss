@@ -23,8 +23,8 @@
     @content;
   }
 }
-@mixin media-custom($width) {
-  @media (max-width: $width) {
+@mixin media-min-mobile {
+  @media (max-width: $mediaWidthMinMobile) {
     @content;
   }
 }

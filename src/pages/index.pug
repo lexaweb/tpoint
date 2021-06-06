@@ -58,13 +58,14 @@ block content
               | &nbsp;основные возможности программы, познакомьтесь с удобным интерфейсом
             .top-banner-block-buttons
               .top-banner-block-buttons-test
-                a(href='/') Попробовать
+                a(href='https://tpoint.fi/static/login.html') Попробовать
               .top-banner-block-buttons-registration
-                a(href='/') Регистрация
+                a(href='https://tpoint.fi/static/register.html') Регистрация
           .top-banner-scroll
             .top-banner-scroll-img
               img(src='img/icon_scroll.png', alt='scroll')
             .top-banner-scroll-text Листайте вниз
+        .top-banner-img_mb
       .inner
         .opportunities
           .opportunities-title.ui-title Основные возможности
@@ -82,6 +83,18 @@ block content
                   img(src=opportunitiesblockitem.img, alt=opportunitiesblockitem.alt)
                 .opportunities-block-item-text!=opportunitiesblockitem.text
                 .opportunities-block-item-number=opportunitiesblockitem.number
+          .opportunities-block.opportunities-slider
+            .swiper-wrapper
+              each opportunitiesblockitem in opportunitiesblock
+                .swiper-slide
+                  .opportunities-block-item
+                    .opportunities-block-item-img
+                      img(src=opportunitiesblockitem.img, alt=opportunitiesblockitem.alt)
+                    .opportunities-block-item-text!=opportunitiesblockitem.text
+                    .opportunities-block-item-number=opportunitiesblockitem.number
+            .swiper-button-next
+            .swiper-button-prev
+            .swiper-pagination
         .cost#cost
           .cost-title.ui-title Стоимость
           .cost-descr Выберите подходящий тариф, который будет удовлетворять вашим техническим требованиям

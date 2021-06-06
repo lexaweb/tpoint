@@ -19,8 +19,8 @@ $(function () {
 function sliderInit() {
   if ($('.training').length > 0) {
     const swiperSlider = new Swiper('.training-block', {
-      slidesPerView: 3,
-      spaceBetween: 0,
+      slidesPerView: 1.2,
+      spaceBetween: 20,
       centeredSlides: true,
       loop: true,
       pagination: {
@@ -30,13 +30,19 @@ function sliderInit() {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
+      },
+      breakpoints: {
+        1025: {
+          slidesPerView: 3,
+          spaceBetween: 0,
+        },
       }
     })
   }
   if ($('.testimonials').length > 0) {
     var swiperSlider = new Swiper('.testimonials-block', {
-      slidesPerView: 3,
-      spaceBetween: 0,
+      slidesPerView: 1.2,
+      spaceBetween: 20,
       centeredSlides: true,
       loop: true,
       observer: true,
@@ -44,6 +50,27 @@ function sliderInit() {
       observeSlideChildren: true,
       initialSlide: 1,
       pagination: {
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      breakpoints: {
+        1025: {
+          slidesPerView: 3,
+          spaceBetween: 0,
+        },
+      }
+    })
+  }
+  if ($('.opportunities').length > 0) {
+    const swiperSlider = new Swiper('.opportunities-slider', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
         clickable: true
       },
       navigation: {
@@ -59,14 +86,16 @@ $("a[href^='#']").click(function(){
   $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
   return false;
 });
-$(window).scroll(function (event) {
-  var top = $(window).scrollTop();
-   if(top >= 860){
-    $(".up").fadeIn()
-   } else {
-    $(".up").fadeOut()
-   }
-});
+if($(window).width() > 768) {
+  $(window).scroll(function (event) {
+    var top = $(window).scrollTop();
+     if(top >= 860){
+      $(".up").fadeIn()
+     } else {
+      $(".up").fadeOut()
+     }
+  });
+}
 }
 function langInit() {
   $('.header-language').on('click', function () {
