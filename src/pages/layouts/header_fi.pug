@@ -1,10 +1,10 @@
 -
   var headermenu =[
-    { link: '#top-banner', text: 'Product'},
-    { link: '#cost', text: 'Price'},
-    { link: '#training', text: 'Tutorials'},
-    { link: '#about_company', text: 'Company'},
-    { link: '#footer', text: 'Contact'}
+    { link: '#top-banner', text: 'Ominaisuudet'},
+    { link: '#cost', text: 'Hinnasto'},
+    { link: '#training', text: 'Koulutusvideot'},
+    { link: '#about_company', text: 'Meistä'},
+    { link: '#footer', text: 'Yhteystiedot'}
   ]
 
 header.header#header
@@ -20,19 +20,19 @@ header.header#header
     .header-menu_mb
       a(href='https://tpoint.fi/static/login.html')
         img(src="img/icon_enter.png", alt="enter")
-        | Contact
+        | Kirjaudu
       a(href='https://tpoint.fi/static/register.html')
         img(src="img/icon_user.png", alt="user")
-        | Register
+        | Luo Tili
     .header-language
       .header-language-item
-        img.header-language-item-icon_flag(src='img/icon_en.png', alt='en')
-        | En
+        img.header-language-item-icon_flag(src='img/icon_fi.png', alt='fi')
+        | Fi
         img.header-language-item-icon_arrow(src='img/icon_arrow_bottom.png', alt='arrow')
       .header-language-links
-        a(href='index_ru.html')
+        a(href='/')
+          img.header-language-item-icon_flag(src='img/icon_en.png', alt='en')
+        a(href='/')
           img.header-language-item-icon_flag(src='img/icon_ru.png', alt='ru')
-        a(href='index_fi.html')
-          img.header-language-item-icon_flag(src='img/icon_fi.png', alt='fi')
     .header-button_login
-      a(href='https://tpoint.fi/static/login.html') Contact
+      a(href='https://tpoint.fi/static/login.html') Kirjaudu

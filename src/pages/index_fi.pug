@@ -1,26 +1,26 @@
-extends layouts/layout
+extends layouts/layout_fi
 
 block variables
   -const pageTitle ='Main'
 
   -
     var opportunitiesblock =[
-      { img: 'img/icon_offers.png', alt: 'offers', text: '<p>Offers and Orders.</p>&nbsp;Keep offers and orders registry, monitor revenue per customer, per order.', number: '1'},
-      { img: 'img/icon_invoices.png', alt: 'invoices', text: '<p>Invoices issue and delivery.</p>&nbsp;Email pdf and send electronic invoices and statements in seconds.', number: '2'},
-      { img: 'img/icon_registry.png', alt: 'registry', text: '<p>Expenses and payments registry.</p>&nbsp;Register expenses and receipts to have precise finance overview of past, present and future finances.', number: '3'},
-      { img: 'img/icon_report.png', alt: 'report', text: '<p>Cashflow report.</p>&nbsp;Track ongoing turnover with one look. Invoices and Expenses flow with one look.', number: '4'},
-      { img: 'img/icon_accounting.png', alt: 'accounting', text: '<p>Multi-currency and exchange rates.</p>&nbsp;Mix any currency in your invoices and convert it instantly into customer\'\s preferred currency.', number: '5'},
-      { img: 'img/icon_offers.png', alt: 'offers', text: '<p>Chart of Accounts.</p>&nbsp;Suitable and adjustable chart of accounts for bookkeeping needs.', number: '6'},
-      { img: 'img/icon_main.png', alt: 'main', text: '<p>General Ledger.</p>&nbsp;Do bookkeeping and taxation reports right from this software or ask your accountant to do it for you.', number: '7'},
-      { img: 'img/icon_copy.png', alt: 'copy', text: '<p>Trial Balance report.</p>&nbsp;Crucial monthly accounting report for Profit & Loss and Balance Sheet reports.', number: '8'},
-      { img: 'img/icon_settings.png', alt: 'settings', text: '<p>Customizable.</p>&nbsp;Templates, reports, financial rules and interface can be adjusted to smooth your workflow.', number: '9'}
+      { img: 'img/icon_offers.png', alt: 'offers', text: '<p>Tarjoukset ja tilaukset.</p>&nbsp;Tee tarjouksia ja rekisteröi tilauksia, seuraa tuloja per asiakas, per tilaus.', number: '1'},
+      { img: 'img/icon_invoices.png', alt: 'invoices', text: '<p>Lähtevät laskut.</p>&nbsp;Lähetä pdf-laskut ja raportit välittömästi.', number: '2'},
+      { img: 'img/icon_registry.png', alt: 'registry', text: '<p>Menot ja saapuvat laskut.</p>&nbsp;Rekisteröi menot ja saapuvat laskut saadaksesi tarkan yleiskuvan menneistä, tulevista ja tällä hetkillä olevista laskuista.', number: '3'},
+      { img: 'img/icon_report.png', alt: 'report', text: '<p>Rahoituslaskelma.</p>&nbsp;Seuraa rahan liikkumista helpommin. Arvioi saldoa helpommin.', number: '4'},
+      { img: 'img/icon_accounting.png', alt: 'accounting', text: '<p>Erilaiset valuuttakurssit ja valuuttajäjestelmät.</p>&nbsp;Vaihda käyttämäsi valuutta asiakkaan haluamaksi valuutaksi nopeasti ja vaivattomasti.', number: '5'},
+      { img: 'img/icon_offers.png', alt: 'offers', text: '<p>Tilikartta.</p>&nbsp;Sopiva ja säädettävä tilikartta avuksi kirjanpitotarpeisiin.', number: '6'},
+      { img: 'img/icon_main.png', alt: 'main', text: '<p>Tilikirja.</p>&nbsp;Tee kirjanpito- ja verotusreportteja tarjoamme ohjelmiston avulla tai pyydä kirjanpitäjääsi tekemään se puolestasi.', number: '7'},
+      { img: 'img/icon_copy.png', alt: 'copy', text: '<p>Koetase.</p>&nbsp;Keskeinen kuukausittainen kirjanpitoraporrti tuloslaskelmaan ja taseeseen.', number: '8'},
+      { img: 'img/icon_settings.png', alt: 'settings', text: '<p>Mukautuva.</p>&nbsp;Mallit, raportit, rahoitussäännöt ja käyttäjäliittymä ovat muokattavissa työntekosi helpottamiseksi.', number: '9'}
     ]
 
   -
     var about_companyblock =[
-      { text: 'Tpoint Oy was opened in 2014. Our company develops financial accounting systems for small businesses, as well as provides consulting services in IT. We have the experience and desire to serve our customers in the best possible way'},
-      { text: 'We constantly improve our products and services and always offer the best solution that adds value to our customers'},
-      { text: 'In addition to financial accounting, Tpoint develops and implements a logistics solution for customs warehouses and freight forwarders in Finland'}
+      { text: 'Tpoint Oy avattiin vuonna 2014. Yrityksemme kehittää pienyritysten kirjanpitojärjestelmiä sekä tarjoaa IT-alan konsultointipalveluja. Meillä on kokemusta ja halua palvella asiakkaitamme parhaalla mahdollisella tavalla'},
+      { text: 'Parannamme jatkuvasti tuotteitamme ja palveluitamme ja tarjoamme aina parhaan ratkaisun, joka tuo lisäarvoa asiakkaillemme'},
+      { text: 'Taloudellisen kirjanpidon lisäksi Tpoint kehittää ja toteuttaa logistiikkaratkaisun tullivarastoille ja huolitsijoille Suomessa'}
     ]
 
   -
@@ -44,38 +44,38 @@ block variables
       { text: 'Quickbooks vs Xero vs Tpoint (long)', video: 'img/video/testimonials/video3.mp4'}
     ]
 
-block content
+block content_fi
   main
     .main-page
       .top-banner#top-banner
         .inner
           .top-banner-block
-            .top-banner-block-title Finance &
-              .ui-red Accounting software
-              p for Small Business
-            .top-banner-block-text Try out the main features of the program for
-              .ui-red free,
-              | &nbsp;get acquainted with the user-friendly interface
+            .top-banner-block-title Talous- ja
+              .ui-red kirjanpito-ohjelmisto
+              p pienyrityksille
+            .top-banner-block-text Kokeile
+              .ui-red ilmaiseksi
+              | &nbsp;tärkeimmät ominaisuudet ohjelman, tutustua käyttäjäystävällinen käyttöliittymä
             .top-banner-block-buttons
               .top-banner-block-buttons-test
-                a(href='https://tpoint.fi/static/login.html') Try now
+                a(href='https://tpoint.fi/static/login.html') Kokeile demoa
               .top-banner-block-buttons-registration
-                a(href='https://tpoint.fi/static/register.html') Register
+                a(href='https://tpoint.fi/static/register.html') Luo Tili
           .top-banner-scroll
             .top-banner-scroll-img
               img(src='img/icon_scroll.png', alt='scroll')
-            .top-banner-scroll-text Scroll down
+            .top-banner-scroll-text Vieritä alas
         .top-banner-img_mb
       .inner
         .opportunities
-          .opportunities-title.ui-title Features
+          .opportunities-title.ui-title Ominaisuudet
           .opportunities-why
             .opportunities-why-block
               .opportunities-why-block-number 9
               .opportunities-why-block-text
-                .red Reasons
-                | Opt for us
-            .opportunities-why-descr Tpoint  is cloud-based software that helps entrepreneurs manage everyday financial routine in simple and flexible solution.
+                .red Syy
+                | Valitse meidät
+            .opportunities-why-descr Tpoint on pilvipohjainen ohjelma, joka auttaa yrittäjiä seuraamaan päivittäisiä liiketoimiaan yksinkertaisella ja joustavalla ratkaisulla.
           .opportunities-block
             each opportunitiesblockitem in opportunitiesblock
               .opportunities-block-item
@@ -96,28 +96,28 @@ block content
             .swiper-button-prev
             .swiper-pagination
         .cost#cost
-          .cost-title.ui-title Price
-          .cost-descr Choose a suitable tariff that will meet your technical requirements
+          .cost-title.ui-title Kustannus
+          .cost-descr Valitse sopiva tariffi, joka täyttää tekniset vaatimukset
           .cost-block
             .cost-block-item
               .cost-block-item-number 01
               .cost-block-item-text
-                p Free up to 200
-                | entries per month
+                p Ilmainen jopa 200
+                | merkinnät kuukaudessa
               .cost-block-item-img
                 img(src='img/img3.png', alt='img3')
             .cost-block-item
               .cost-block-item-number 02
               .cost-block-item-text
-                p 0,10 EUR + VAT
-                | for subsequent entries
+                p 0,10 EUR + ALV
+                | myöhemmät merkinnät
               .cost-block-item-text_abs
-                p Optionally:
-                | &nbsp;individual software customization: 80 EUR +VAT / hour
+                p Valinnainen:
+                | &nbsp;Yksittäiset ohjelman asetukset: 80 EUR + alv / tunti
               .cost-block-item-img
                 img(src='img/img5.png', alt='img5')
         .training#training
-          .training-title.ui-title Training videos
+          .training-title.ui-title Treenivideot
           .training-block
             .swiper-wrapper
               each trainingslide in training
@@ -127,10 +127,10 @@ block content
             .swiper-button-prev
             .swiper-pagination
         .testimonials
-          .testimonials-title.ui-title Testimonials
+          .testimonials-title.ui-title Asiakaspalaute
           .testimonials-tab
-            .testimonials-tab-text Text messages
-            .testimonials-tab-video Video reviews
+            .testimonials-tab-text Tekstiviesti
+            .testimonials-tab-video Videoarvostelut
           .testimonials-block
             .swiper-wrapper
               .swiper-slide.text
@@ -153,21 +153,21 @@ block content
                   .video-text=testimonialsvideoslide.text
                   video(src=testimonialsvideoslide.video, type='video/mp4' controls)
             .swiper-button-next
-              p Further
+              p Далее
             .swiper-button-prev
-              p Back
+              p Назад
       .about_company#about_company
         .inner
-          .about_company-title.ui-title about company
+          .about_company-title.ui-title Tietoa yrityksestä
           .about_company-block
             ul
               each about_companyblockitem in about_companyblock
                 li=about_companyblockitem.text
               .about_company-block-detail
-                a(href='https://logistics.tpoint.fi/') Learn more
+                a(href='https://logistics.tpoint.fi/') Lue lisää
             .about_company-block-img
               img(src='img/img7.png', alt='img7')
       a.up(href='#header')
-        .up-text Up
+        .up-text Jopa
         .up-button
           img(src='img/icon_arrow_top.png', alt='arrow_top')

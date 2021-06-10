@@ -1,0 +1,173 @@
+extends layouts/layout_ru
+
+block variables
+  -const pageTitle ='Main'
+
+  -
+    var opportunitiesblock =[
+      { img: 'img/icon_offers.png', alt: 'offers', text: '<p>Предложения и Заказы.</p>&nbsp;Создавайте Предложения для Ваших клиентов и регистрируйте Заказы, следите за выручкой индивидуально по Клиенту или Заказу.', number: '1'},
+      { img: 'img/icon_invoices.png', alt: 'invoices', text: '<p>Исходящие Счета.</p>&nbsp;Отправляйте по электронной почте pdf счета и отчёты за секунды.', number: '2'},
+      { img: 'img/icon_registry.png', alt: 'registry', text: '<p>Реестр Затрат и Платёжных поручений.</p>&nbsp;Регистрируйте Расходы и Чеки, чтобы точно знать финансовое состояние на текущее время, в прошлом и в будущем.', number: '3'},
+      { img: 'img/icon_report.png', alt: 'report', text: '<p>Отчёт о движении денеждных средств.</p>&nbsp;Оцените состояние счёта с одного взгляда на отчёте, отображающим оплаты Поставщикам и поступления от Клиентов.', number: '4'},
+      { img: 'img/icon_accounting.png', alt: 'accounting', text: '<p>Мультивалютный учёт и Обменные Курсы.</p>&nbsp;Смешивайте любые валюты в счетах и приводите счета разных валют к единой выбранной валюте.', number: '5'},
+      { img: 'img/icon_offers.png', alt: 'offers', text: '<p>План Счетов.</p>&nbsp;Настраиваемый и подходящий план счетов для нужд бухгалтерского учёта', number: '6'},
+      { img: 'img/icon_main.png', alt: 'main', text: '<p>Главная Книга.</p>&nbsp;Ведите бухгалтерский и налоговый учёт прямо в программе или попросите Вашего бухгалтера делать его для Вас.', number: '7'},
+      { img: 'img/icon_copy.png', alt: 'copy', text: '<p>Оборотно-сальдовая ведомость.</p>&nbsp;Основной отчёт, необходимый для Бухгалтерского баланса и отчёта о Прибылях и Убытках', number: '8'},
+      { img: 'img/icon_settings.png', alt: 'settings', text: '<p>Настройки.</p>&nbsp;Шаблоны, отчёты, финансовые правила и интерфейс могут быть настроены для облегчения Вашей работы.', number: '9'}
+    ]
+
+  -
+    var about_companyblock =[
+      { text: 'Tpoint Oy была открыта в 2014 году. Наша компания разрабатывает системы финансового учёта для малых предприятий, а также оказывает консалтинговые услуги в ИТ. У нас есть опыт и желание обслуживать наших клиентов наилучшим образом'},
+      { text: 'Мы постоянно совершенствуем наши продукты и услуги и всегда предлагаем лучшее решение, которое увеличивает ценность для наших клиентов'},
+      { text: 'Помимо финансового учёта Tpoint разрабатывает и внедряет логистическое решение для таможенных складов и экспедиторов в Финляндии'}
+    ]
+
+  -
+    var training =[
+      { src: 'img/video/training/video1.mp4'},
+      { src: 'img/video/training/video2.mp4'},
+      { src: 'img/video/training/video3.mp4'},
+      { src: 'img/video/training/video4.mp4'},
+      { src: 'img/video/training/video5.mp4'},
+      { src: 'img/video/training/video6.mp4'},
+      { src: 'img/video/training/video7.mp4'},
+      { src: 'img/video/training/video8.mp4'},
+      { src: 'img/video/training/video9.mp4'},
+      { src: 'img/video/training/video10.mp4'},
+      { src: 'img/video/training/video11.mp4'}
+    ]
+  -
+    var testimonialsvideo =[
+      { text: 'Peter Vesterbacka, основатель Angry Birds', video: 'img/video/testimonials/video1.mp4'},
+      { text: 'Jacquelyn, USA accountant', video: 'img/video/testimonials/video2.mp4'},
+      { text: 'Quickbooks vs Xero vs Tpoint (long)', video: 'img/video/testimonials/video3.mp4'}
+    ]
+
+block content_ru
+  main
+    .main-page
+      .top-banner#top-banner
+        .inner
+          .top-banner-block
+            .top-banner-block-title Программа
+              .ui-red финансового учёта
+              p для предпринимателей
+            .top-banner-block-text Попробуйте
+              .ui-red бесплатно
+              | &nbsp;основные возможности программы, познакомьтесь с удобным интерфейсом
+            .top-banner-block-buttons
+              .top-banner-block-buttons-test
+                a(href='https://tpoint.fi/static/login.html') Попробовать
+              .top-banner-block-buttons-registration
+                a(href='https://tpoint.fi/static/register.html') Регистрация
+          .top-banner-scroll
+            .top-banner-scroll-img
+              img(src='img/icon_scroll.png', alt='scroll')
+            .top-banner-scroll-text Листайте вниз
+        .top-banner-img_mb
+      .inner
+        .opportunities
+          .opportunities-title.ui-title Основные возможности
+          .opportunities-why
+            .opportunities-why-block
+              .opportunities-why-block-number 9
+              .opportunities-why-block-text
+                .red Причин
+                | Остановить свой выбор на нас
+            .opportunities-why-descr Tpoint - это облачная программа, помогающая предпринимателям вести учёт ежедневных финансовых операций в простом и гибком решении.
+          .opportunities-block
+            each opportunitiesblockitem in opportunitiesblock
+              .opportunities-block-item
+                .opportunities-block-item-img
+                  img(src=opportunitiesblockitem.img, alt=opportunitiesblockitem.alt)
+                .opportunities-block-item-text!=opportunitiesblockitem.text
+                .opportunities-block-item-number=opportunitiesblockitem.number
+          .opportunities-block.opportunities-slider
+            .swiper-wrapper
+              each opportunitiesblockitem in opportunitiesblock
+                .swiper-slide
+                  .opportunities-block-item
+                    .opportunities-block-item-img
+                      img(src=opportunitiesblockitem.img, alt=opportunitiesblockitem.alt)
+                    .opportunities-block-item-text!=opportunitiesblockitem.text
+                    .opportunities-block-item-number=opportunitiesblockitem.number
+            .swiper-button-next
+            .swiper-button-prev
+            .swiper-pagination
+        .cost#cost
+          .cost-title.ui-title Стоимость
+          .cost-descr Выберите подходящий тариф, который будет удовлетворять вашим техническим требованиям
+          .cost-block
+            .cost-block-item
+              .cost-block-item-number 01
+              .cost-block-item-text
+                p Бесплатно до 200
+                | записей в месяц
+              .cost-block-item-img
+                img(src='img/img3.png', alt='img3')
+            .cost-block-item
+              .cost-block-item-number 02
+              .cost-block-item-text
+                p 0,10 EUR + НДС
+                | за последующие записи
+              .cost-block-item-text_abs
+                p Опционально:
+                | &nbsp;Индивидуальные настройки программы: 80 EUR + НДС / час
+              .cost-block-item-img
+                img(src='img/img5.png', alt='img5')
+        .training#training
+          .training-title.ui-title Обучающие видео
+          .training-block
+            .swiper-wrapper
+              each trainingslide in training
+                .swiper-slide
+                  video(src=trainingslide.src, type='video/mp4' controls)
+            .swiper-button-next
+            .swiper-button-prev
+            .swiper-pagination
+        .testimonials
+          .testimonials-title.ui-title Отзывы
+          .testimonials-tab
+            .testimonials-tab-text Текстовые
+            .testimonials-tab-video Видео-отзывы
+          .testimonials-block
+            .swiper-wrapper
+              .swiper-slide.text
+                .text-name Марианна Кок
+                .text-descr Предпринематель
+                .text-explanation Простота использования, хорошие отчеты и, прежде всего, отличное обслуживание клиентов позволяют вам самостоятельно заботиться о счетах и ​​упрощают финансовый мониторинг.
+                .text-quote "
+              .swiper-slide.text
+                .text-name Паули Турунен
+                .text-descr Бизнес-тренер
+                .text-explanation Лучшее в Tpoint - это отчеты. Отсюда я могу мгновенно увидеть финансовое положение своей компании, а также получить все цифры, удобные для налогоплательщика.
+                .text-quote "
+              .swiper-slide.text
+                .text-name Паули Турунен
+                .text-descr Бизнес-тренер
+                .text-explanation Лучшее в Tpoint - это отчеты. Отсюда я могу мгновенно увидеть финансовое положение своей компании, а также получить все цифры, удобные для налогоплательщика.
+                .text-quote "
+              each testimonialsvideoslide in testimonialsvideo
+                .swiper-slide.video
+                  .video-text=testimonialsvideoslide.text
+                  video(src=testimonialsvideoslide.video, type='video/mp4' controls)
+            .swiper-button-next
+              p Далее
+            .swiper-button-prev
+              p Назад
+      .about_company#about_company
+        .inner
+          .about_company-title.ui-title О компании
+          .about_company-block
+            ul
+              each about_companyblockitem in about_companyblock
+                li=about_companyblockitem.text
+              .about_company-block-detail
+                a(href='https://logistics.tpoint.fi/') Узнать подробнее
+            .about_company-block-img
+              img(src='img/img7.png', alt='img7')
+      a.up(href='#header')
+        .up-text Наверх
+        .up-button
+          img(src='img/icon_arrow_top.png', alt='arrow_top')

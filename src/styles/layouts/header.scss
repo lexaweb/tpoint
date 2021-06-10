@@ -57,6 +57,7 @@ body {
       }
     }
     &-mb {
+      order: -1;
       display: none;
       cursor: pointer;
       @include media-tablet {
@@ -92,7 +93,8 @@ body {
       visibility: visible;
       transition: 0.3s;
       @include media-tablet {
-        order: -1;
+        order: 0;
+        margin-right: 20px;
       }
       &.active {
         opacity: 0;
